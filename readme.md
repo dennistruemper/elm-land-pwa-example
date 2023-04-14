@@ -53,3 +53,12 @@ So the manifest file should now be reachable by requesting `http://localhost:123
 Elm-land makes this an easy task. Just add an link entry to the elm-land.json like you did with the stylesheet earlier.
 
 Now refresh your page and you should see the manifest file in your network traffic. (Ignore the error for fivicon for now, we will be fixing this soon)
+
+### Step 4 - Add an Icon
+
+So an Icon is a static file, just like the manifest file, right? So we put it inside static too. And the other this is, we already put a path and name inside our manifest file, so all we have to do is to find a geat logo for our app. Oh, you say this is a hard task, I know. Lucky me, I have a cute logo of a T-Rex with a clipboard at hand, so I will use this. He will track our progress and remind us if we forget anything.
+While we are at it, I will add the same file as `static/favicon.ico` so we have a nive friendly tab icon.
+
+**This is just for demonstration and no good practice for production apps, these images are way too big. Use small images as icon.**
+
+So no more error in dev tools and a nice looking tab, on to the next one :-)
