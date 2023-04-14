@@ -62,3 +62,19 @@ While we are at it, I will add the same file as `static/favicon.ico` so we have 
 **This is just for demonstration and no good practice for production apps, these images are way too big. Use small images as icon.**
 
 So no more error in dev tools and a nice looking tab, on to the next one :-)
+
+### Step 5 - Add the service worker file
+
+**Just to make it clear upfront, this will be a very simple serviceWorker. Do not take it in production without checking your needs**
+
+The base for my file can be found [here](https://googlechrome.github.io/samples/service-worker/basic/). I just made it a little bit easier (on the eyes), removed the multi cache stuff to have a simpler one cache solution and changed the `PRECACHE_URLS` to match elm-lands needs. If you need some stuff from the static directory loaded at runtime and want to store it on the device when the user installs the PWA, add it to this list.
+
+So just have a look at the `static/serviceWorker.js`.
+
+What you want to think about is the caching strategy of your PWA. Here I choose `Network First` strategy, so local files are just a backup when there is no internet connection. This depends on your goals, I think [this blogpost](https://blog.bitsrc.io/5-service-worker-caching-strategies-for-your-next-pwa-app-58539f156f52) is a good entry point.
+
+So now we have a serviceWorker file. _This is where the magic of a PWA is._ [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) might explain it better than me, take some time to have a look what the serviceWorker is all about before you continue.
+
+Welcome back, I am really proud of you, because you took the time and read the documentation. Just like I suggested.
+
+So now you ask: 'But just the file is not enough, what do we do with it?' Let's go to the next step to answer that.
