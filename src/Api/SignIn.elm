@@ -1,5 +1,6 @@
 module Api.SignIn exposing (Data, Error, post)
 
+import Api.Config
 import Effect exposing (Effect)
 import Http
 import Json.Decode
@@ -49,7 +50,7 @@ post options =
         cmd : Cmd msg
         cmd =
             Http.post
-                { url = "http://localhost:5000/api/sign-in"
+                { url = Api.Config.baseUrl ++ "/api/sign-in"
                 , body = Http.jsonBody body
                 , expect =
                     Http.expectStringResponse

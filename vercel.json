@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npx elm-land build",
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}

@@ -1,0 +1,14 @@
+{
+  "short_name": "Elm land PWA",
+  "name": "Elm-land-pwa-example",
+  "icons": [
+    {
+      "src": "./img/logo/favicon.png",
+      "sizes": "256x256, 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone"
+}
