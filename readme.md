@@ -103,3 +103,14 @@ So lets have a recap.
 - https todo
 
 So on to the next part.
+
+### Step 7 - Serve app over HTTPS
+
+There are a lot of ways to host a webapp. Feel free to use an other way. This is why I put this as last step, so you can follow along all the way and host as you like. I will use [vercel](vercel.com) as I find it quick and easy to use and it has [documentation on elm-land](https://elm.land/guide/deploying.html#deploying-with-vercel).
+
+So lets get started.
+
+1. Copy the `vercel.json` from elm-land documentation.
+2. execute vercel cli (no parameters needed) with `npx vercel` and follow instructions
+3. Not even a full minute later the [app is online](https://elm-land-pwa-example.vercel.app/)
+4. This is no commercial for vercel, I am just blown away by how easy it is, compared to other products I used in the past. And I know there are other modern and easy alternatives.
