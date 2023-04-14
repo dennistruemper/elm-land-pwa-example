@@ -78,3 +78,28 @@ So now we have a serviceWorker file. _This is where the magic of a PWA is._ [MDN
 Welcome back, I am really proud of you, because you took the time and read the documentation. Just like I suggested.
 
 So now you ask: 'But just the file is not enough, what do we do with it?' Let's go to the next step to answer that.
+
+### Step 6 - Wire up the service worker file
+
+So as you know by now, we need to install or register the service worker. Most tutorials will suggest you to add some javascript to your `index.html` file. But we are using elm-land, so this will be generated and we can not add any javascript to it. Well, at least not direct.
+
+But we can do the better solution: Create a javascript file and reference the script in our elm-land generted index.html. So how do we do that.
+
+First we need our javascript in a file in the `static` directory. Mine is called `registerServiceworker.js` and I hope you can gess, what the content will do ;-). Have a look to be sure!
+
+So now that we have a script, how do we execute it using elm-land? The answer is once again the `elm-land.json` file. Just add it in the `script` block.
+
+```js
+      "script": [{ "src": "./registerServiceworker.js" }]
+```
+
+Save, refresh your page and have a look in the devtools console. There it is: `Registration successful, scope is...`
+
+So lets have a recap.
+
+- webmanifest done
+- serviceworker done
+- logo done
+- https todo
+
+So on to the next part.
