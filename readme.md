@@ -45,3 +45,11 @@ Let's have a look at the content. What is in there? I assume you know JSON, this
 - `display`: You have to define the look of the app. Our app should look like a normal app on the phone and not like a browser, that's why we use `standalon`. If you do not want this, choose an other option from the [documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest/display).
 
 That was a lot to explain for a 14 line file added. This means there is a lot of heavy lifting done by the browser vendors. The next time will be way easier :-)
+
+### Step 3 - Wire up the manifest file
+
+So the manifest file should now be reachable by requesting `http://localhost:1234/manifest` in your browser. If not, check the port or go back to `step 2`. But our application does not know about the manifest file. If you load your app and check the traffic in the dev tools you will not see the manifest file. So how do we get it to load in the client?
+
+Elm-land makes this an easy task. Just add an link entry to the elm-land.json like you did with the stylesheet earlier.
+
+Now refresh your page and you should see the manifest file in your network traffic. (Ignore the error for fivicon for now, we will be fixing this soon)
