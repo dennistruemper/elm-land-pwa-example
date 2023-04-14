@@ -32,3 +32,16 @@ So now the boring stuff is out of our way, lets start with PWA specific things. 
 4. A service worker
 
 Oh, that sounds like a lot of work and a lot of questions. Lets tackle it one by one.
+
+### Step 2 - Add the manifest file
+
+Elm-land does not have a directory with the name `static` right now, so we create it and add the `manifast` file. This can take an optional fileextension if you like `manifest.webmanifest` more. Files inside the static directory will be served, so it is now possible to bring this file to the client.
+
+Let's have a look at the content. What is in there? I assume you know JSON, this file is formatted with it. So let's just talk about the minimal content.
+
+- `name` and `short_name`: Well, here you can define the name of your app. It the name is too long for some use cases you can also define a shorter name. If you want to know more, have a look at the documentation for [name](https://developer.mozilla.org/en-US/docs/Web/Manifest/name) or [short_name](https://developer.mozilla.org/en-US/docs/Web/Manifest/short_name).
+- `icons`: Without icon you get nothing to tap on your phones home screen, so this is mandatory to have an app.
+- `start_url`: This is the path of your elm-land app you want to direct to, when the app is started. In almost every example of PWAs you will find `./index.html` as the default value. **WATCH OUT** elm-land will redirect you to page not found if you enter index.html after a route defined with `Home_.elm`. This took me some time to figure it out. Be smart and set `./` as the `start_url`.
+- `display`: You have to define the look of the app. Our app should look like a normal app on the phone and not like a browser, that's why we use `standalon`. If you do not want this, choose an other option from the [documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest/display).
+
+That was a lot to explain for a 14 line file added. This means there is a lot of heavy lifting done by the browser vendors. The next time will be way easier :-)
