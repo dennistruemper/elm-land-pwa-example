@@ -1,5 +1,6 @@
 module Api.Me exposing (User, get)
 
+import Api.Config
 import Effect exposing (Effect)
 import Http
 import Json.Decode
@@ -31,7 +32,7 @@ get options =
     let
         url : String
         url =
-            "http://localhost:5000/api/me?token=" ++ options.token
+            Api.Config.baseUrl ++ "/api/me?token=" ++ options.token
 
         cmd : Cmd msg
         cmd =

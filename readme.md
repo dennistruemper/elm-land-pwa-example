@@ -2,7 +2,7 @@
 
 ## Why ?
 
-This is to demonstrate the basic steps of turning an elm-land application into an installable PWA. This is just the beginning, you have to add offline functionality or PWA features like nofification, taking pictures and others.
+This is to demonstrate the basic steps of turning an elm-land application into an installable PWA (Progressive Web App). This is just the beginning, you have to add offline functionality or PWA features like nofification, taking pictures and others.
 
 ## How ?
 
@@ -15,3 +15,7 @@ You will find a description of every step in this file in the section **Steps**
 ## Steps
 
 Following every step needed to installable PWA.
+
+# Step 0
+
+We need a server to authenticate the user. We do not want to run it on every device using the PWA, so a localhost implementation isn't a great idea for this. So first lets swap the localhost address to some address I made up with a similar implemented server.
