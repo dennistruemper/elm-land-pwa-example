@@ -10,7 +10,7 @@ This uses the elm-land example [05-user-auth](https://github.com/elm-land/elm-la
 
 We have a branch `main` where the finished result is. A branch `initial` where the original tutorial code is. And a branch `introduction-of-pwa` where every step has its own commit.
 
-If you want to sell the full for all steps, have a look at the [PR](https://github.com/dennistruemper/elm-land-pwa-example/pull/1)
+If you want to sell the full diff for all steps, have a look at the [PR](https://github.com/dennistruemper/elm-land-pwa-example/pull/1)
 
 You will find a description of every step in this file in the section **Steps**
 
