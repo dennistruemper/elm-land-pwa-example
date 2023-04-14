@@ -114,3 +114,14 @@ So lets get started.
 2. execute vercel cli (no parameters needed) with `npx vercel` and follow instructions
 3. Not even a full minute later the [app is online](https://elm-land-pwa-example.vercel.app/)
 4. This is no commercial for vercel, I am just blown away by how easy it is, compared to other products I used in the past. And I know there are other modern and easy alternatives.
+
+### Step 8 - Play around
+
+I will use an iPhone with Safari do describe how it works. Android Desktop or other usage is an exercise for the reader.
+
+1. First visit your website with your phone or use [mine](https://elm-land-pwa-example.vercel.app).
+2. Tap on the share button and selet `Add to homescreen`
+3. See your logo, the `short_name` defined in webmanifest and the URL. Tap on add.
+4. Congratulations - You have installed your own PWA.
+5. Come an, start it.
+6. Try different cache strategies, test offline functionality (right now it is bad) and learn more.
