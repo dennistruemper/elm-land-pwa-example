@@ -125,3 +125,13 @@ I will use an iPhone with Safari do describe how it works. Android Desktop or ot
 4. Congratulations - You have installed your own PWA.
 5. Come an, start it.
 6. Try different cache strategies, test offline functionality (right now it is bad) and learn more.
+
+## Pitfalls
+
+### serviceworker registered for localhost:1234
+
+If you register your serviceworker on your dev machine do not waste time like I did. Depending on your cache strategy you could have realy funny behaviour the next time you develop an app on port 1234. I had a cache first service worker running for lokalhost:1234 and the new elm-land project used the same port. Whenever I loaded a page the old project did not have, I had the correct result. But the homepage has always been the hello world from the last project. One more minute and I would have opened an issue on elm-land, very nasty.
+
+### start_url set to ./index.html
+
+As mentioned in step 2, elm-land responds to `./index.html` with page not found. But every tutorial I found has da default value of `./index.html` for `start_url` in the manifest file. Remember to set this to `./` if you use a more complex manifest file as template.
